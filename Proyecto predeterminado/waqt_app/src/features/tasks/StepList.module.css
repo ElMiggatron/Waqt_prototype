@@ -1,0 +1,132 @@
+.steps {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-1) 0;
+}
+
+.circle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 1.2rem;
+  block-size: 1.2rem;
+  margin-block-start: 0.15rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-accent-contrast);
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.circle:hover {
+  border-color: var(--color-accent);
+}
+
+.isDone .circle {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.text {
+  flex: 1;
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+  font-size: var(--font-size-sm);
+}
+
+.isDone .text {
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.delete {
+  flex: none;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  opacity: 0;
+  transition:
+    color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.step:hover .delete,
+.delete:focus-visible {
+  opacity: 1;
+}
+
+.delete:hover {
+  color: var(--color-danger);
+}
+
+.addButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-self: start;
+  padding: var(--space-1) 0;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.addButton:hover {
+  color: var(--color-accent);
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.input {
+  flex: 1;
+  min-inline-size: 0;
+  block-size: 2.25rem;
+  padding-inline: var(--space-3);
+  border: var(--soft-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}
+
+.input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+.composerAction {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+}
+
+.composerAction:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  color: var(--color-accent);
+}
+
+/* Touch layouts always show the delete affordance; hover does not exist there. */
+@media (hover: none) {
+  .delete {
+    opacity: 1;
+  }
+}

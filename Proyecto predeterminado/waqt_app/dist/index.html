@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" data-theme="abbasid-black">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta
+      name="description"
+      content="Waqt — a calm, local-first space for lists, study, projects, and the five daily prayers."
+    />
+    <title>Waqt</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var saved = window.localStorage.getItem('waqt:theme');
+          if (saved) document.documentElement.dataset.theme = saved;
+        } catch (error) {
+          document.documentElement.dataset.theme = 'abbasid-black';
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-BnZCrdDj.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C2lcOiXL.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

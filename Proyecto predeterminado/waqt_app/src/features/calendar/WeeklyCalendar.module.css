@@ -1,0 +1,258 @@
+.weekView {
+  --week-header-height: 3.6rem;
+  --week-allday-height: 2.5rem;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.swatch {
+  inline-size: 0.7rem;
+  block-size: 0.7rem;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.scroll {
+  overflow-x: auto;
+  padding-block-end: var(--space-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3.5rem repeat(7, minmax(6.5rem, 1fr));
+  inline-size: 100%;
+}
+
+.gutter,
+.dayColumn {
+  display: grid;
+  grid-template-rows: var(--week-header-height) var(--week-allday-height) auto;
+  min-inline-size: 0;
+}
+
+.gutter {
+  position: sticky;
+  inset-inline-start: 0;
+  z-index: 2;
+  background: var(--color-surface);
+}
+
+.headerSpacer {
+  block-size: var(--week-header-height);
+}
+
+.allDaySpacer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline-end: var(--space-2);
+  border-block: var(--soft-border);
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.timeColumn {
+  position: relative;
+}
+
+.timeLabel {
+  position: absolute;
+  inset-inline-end: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.62rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.timeLabel:first-child {
+  transform: none;
+}
+
+.dayColumn {
+  border-inline-start: var(--soft-border);
+}
+
+.dayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  text-align: center;
+}
+
+.weekday {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.dateCircle {
+  display: grid;
+  place-items: center;
+  inline-size: 2rem;
+  block-size: 2rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dateCircle.isToday {
+  border-color: var(--color-today-ring);
+  color: var(--color-today-ring);
+}
+
+.secondaryDate {
+  color: var(--color-text-muted);
+  font-size: 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.allDayRow {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-inline-size: 0;
+  overflow-y: auto;
+  padding: 2px;
+  border-block: var(--soft-border);
+}
+
+.allDayEvent {
+  display: block;
+  overflow: hidden;
+  padding: 1px 4px;
+  border-inline-start: 2px solid currentColor;
+  border-radius: 2px;
+  background: var(--color-surface-raised);
+  font-size: 0.62rem;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lane {
+  position: relative;
+  min-inline-size: 0;
+}
+
+.hourLine {
+  position: absolute;
+  inset-inline: 0;
+  border-block-start: 1px solid var(--color-border);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.event {
+  position: absolute;
+  inset-inline: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  overflow: hidden;
+  padding: 2px 4px;
+  border: 1px solid var(--color-border);
+  border-inline-start-width: 3px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-size: 0.65rem;
+  line-height: 1.15;
+}
+
+.eventTime {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.75;
+}
+
+.eventTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kindAcademic {
+  border-inline-start-color: var(--color-task-academic);
+  color: var(--color-task-academic);
+}
+
+.kindIntellectual {
+  border-inline-start-color: var(--color-task-intellectual);
+  color: var(--color-task-intellectual);
+}
+
+.kindProject {
+  border-inline-start-color: var(--color-task-project);
+  color: var(--color-task-project);
+}
+
+.kindList {
+  border-inline-start-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.salah {
+  color: var(--color-salah);
+}
+
+.isDone {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+.salahNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}
+
+.outsideNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}
+
+@media (orientation: portrait) {
+  .weekView {
+    --week-header-height: 3.4rem;
+  }
+
+  .grid {
+    grid-template-columns: 3rem repeat(7, calc((100% - 3rem) / 2));
+    inline-size: 100%;
+  }
+
+  .weekday {
+    font-size: 0.6rem;
+  }
+
+  .dateCircle {
+    inline-size: 1.75rem;
+    block-size: 1.75rem;
+    font-size: var(--font-size-md);
+  }
+}

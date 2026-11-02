@@ -1,0 +1,20 @@
+[data-theme='sahel-yellow'] {
+  color-scheme: light;
+
+  --color-bg: #e6c280;
+  --color-surface: #eed49f;
+  --color-surface-raised: #f5e3bf;
+  --color-border: #b98d4b;
+  --color-text: #2b1a0b;
+  --color-text-muted: #57401f;
+  --color-accent: #a8461f;
+  --color-accent-contrast: #fffdf7;
+  --color-accent-alt: #d9a05b;
+  --color-danger: #8a1c1c;
+  --color-focus-ring: #7a3b12;
+  --color-today-ring: #7a3b12;
+  --color-salah: #7a3b12;
+  --color-task-academic: #7a1f1f;
+  --color-task-intellectual: #1f3a6e;
+  --color-task-project: #2b1a0b;
+}

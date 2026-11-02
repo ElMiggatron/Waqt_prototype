@@ -1,0 +1,20 @@
+[data-theme='abbasid-black'] {
+  color-scheme: dark;
+
+  --color-bg: #1a1a1a;
+  --color-surface: #242424;
+  --color-surface-raised: #2c2c2c;
+  --color-border: #3d3d3d;
+  --color-text: #f5f2ea;
+  --color-text-muted: #b8b3a7;
+  --color-accent: #d4af37;
+  --color-accent-contrast: #1a1a1a;
+  --color-accent-alt: #2c2c2c;
+  --color-danger: #ff7a7a;
+  --color-focus-ring: #d4af37;
+  --color-today-ring: #d4af37;
+  --color-salah: #d4af37;
+  --color-task-academic: #f19a9a;
+  --color-task-intellectual: #8fb2ff;
+  --color-task-project: #ffffff;
+}

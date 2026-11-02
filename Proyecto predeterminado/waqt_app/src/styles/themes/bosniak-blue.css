@@ -1,0 +1,20 @@
+[data-theme='bosniak-blue'] {
+  color-scheme: light;
+
+  --color-bg: #fafafa;
+  --color-surface: #f0f2f7;
+  --color-surface-raised: #ffffff;
+  --color-border: #c9d2e3;
+  --color-text: #10141c;
+  --color-text-muted: #55607a;
+  --color-accent: #003399;
+  --color-accent-contrast: #ffffff;
+  --color-accent-alt: #4169e1;
+  --color-danger: #b3261e;
+  --color-focus-ring: #003399;
+  --color-today-ring: #003399;
+  --color-salah: #003399;
+  --color-task-academic: #8b2e2e;
+  --color-task-intellectual: #1f3a6e;
+  --color-task-project: #10141c;
+}

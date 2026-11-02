@@ -1,0 +1,45 @@
+.display {
+  flex: 1;
+  min-inline-size: 0;
+  block-size: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--color-bg);
+}
+
+.content {
+  max-inline-size: var(--content-max-width);
+  min-block-size: 100%;
+  padding: var(--space-6) clamp(var(--space-4), 4vw, var(--space-8))
+    max(var(--space-7), env(safe-area-inset-bottom));
+  margin-inline: auto;
+}
+
+.backButton {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  inline-size: 100%;
+  padding: max(var(--space-3), env(safe-area-inset-top)) var(--space-4)
+    var(--space-3);
+  border-block-end: var(--soft-border);
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: start;
+}
+
+.backButton:hover {
+  color: var(--color-accent);
+}
+
+@media (orientation: portrait) {
+  .content {
+    padding: var(--space-4) var(--space-4)
+      max(var(--space-7), env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,20 @@
+[data-theme='ramadan'] {
+  color-scheme: light;
+
+  --color-bg: #d4af37;
+  --color-surface: #e3c463;
+  --color-surface-raised: #f0d77f;
+  --color-border: #a5811f;
+  --color-text: #241a00;
+  --color-text-muted: #5a4300;
+  --color-accent: #5a4300;
+  --color-accent-contrast: #fffdf0;
+  --color-accent-alt: #fffdf0;
+  --color-danger: #8a1c1c;
+  --color-focus-ring: #5a4300;
+  --color-today-ring: #5a4300;
+  --color-salah: #5a4300;
+  --color-task-academic: #7a1f1f;
+  --color-task-intellectual: #1f3a6e;
+  --color-task-project: #241a00;
+}

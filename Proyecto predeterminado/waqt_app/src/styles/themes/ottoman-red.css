@@ -1,0 +1,20 @@
+[data-theme='ottoman-red'] {
+  color-scheme: dark;
+
+  --color-bg: #8b0000;
+  --color-surface: #780000;
+  --color-surface-raised: #640000;
+  --color-border: #b35a5a;
+  --color-text: #fff4ec;
+  --color-text-muted: #f2cbc2;
+  --color-accent: #c9a7ff;
+  --color-accent-contrast: #26063f;
+  --color-accent-alt: #2e9b6b;
+  --color-danger: #ffb3b3;
+  --color-focus-ring: #ffd9a0;
+  --color-today-ring: #ffd9a0;
+  --color-salah: #ffd9a0;
+  --color-task-academic: #ffc2c2;
+  --color-task-intellectual: #c3d3ff;
+  --color-task-project: #ffffff;
+}

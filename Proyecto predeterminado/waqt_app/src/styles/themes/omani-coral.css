@@ -1,0 +1,20 @@
+[data-theme='omani-coral'] {
+  color-scheme: light;
+
+  --color-bg: #f8f6f0;
+  --color-surface: #efebe1;
+  --color-surface-raised: #ffffff;
+  --color-border: #d6cdba;
+  --color-text: #23211c;
+  --color-text-muted: #5c5648;
+  --color-accent: #2e5a44;
+  --color-accent-contrast: #ffffff;
+  --color-accent-alt: #c29b38;
+  --color-danger: #a4261e;
+  --color-focus-ring: #2e5a44;
+  --color-today-ring: #7a5b12;
+  --color-salah: #2e5a44;
+  --color-task-academic: #8b2e2e;
+  --color-task-intellectual: #1f3a6e;
+  --color-task-project: #23211c;
+}

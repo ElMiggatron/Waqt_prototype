@@ -1,0 +1,20 @@
+[data-theme='sacred-month'] {
+  color-scheme: light;
+
+  --color-bg: #fafaf8;
+  --color-surface: #f3f0ee;
+  --color-surface-raised: #ffffff;
+  --color-border: #ddd3d0;
+  --color-text: #241c1a;
+  --color-text-muted: #5e514d;
+  --color-accent: #a52a2a;
+  --color-accent-contrast: #ffffff;
+  --color-accent-alt: #d32f2f;
+  --color-danger: #a52a2a;
+  --color-focus-ring: #a52a2a;
+  --color-today-ring: #a52a2a;
+  --color-salah: #a52a2a;
+  --color-task-academic: #8b2e2e;
+  --color-task-intellectual: #1f3a6e;
+  --color-task-project: #241c1a;
+}

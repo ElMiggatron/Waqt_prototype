@@ -1,0 +1,240 @@
+/*
+ * SPEC: full-height task panel, 1/6 of the viewport on desktop and full screen in
+ * portrait. It sits directly right of the sidebar and pushes the display instead of
+ * covering navigation. D5: `--task-panel-width` keeps a readable floor on small screens.
+ */
+.panel {
+  display: flex;
+  flex: 0 0 var(--task-panel-width);
+  flex-direction: column;
+  inline-size: var(--task-panel-width);
+  block-size: 100dvh;
+  min-inline-size: 0;
+  overflow: hidden;
+  border-inline-end: var(--soft-border);
+  outline: none;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  animation: slide-in var(--transition-base);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.header {
+  display: grid;
+  gap: var(--space-2);
+  flex: none;
+  padding: var(--space-3) var(--space-3) var(--space-4);
+  border-block-end: var(--soft-border);
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-1);
+}
+
+.star,
+.iconButton {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 2.1rem;
+  block-size: 2.1rem;
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.star:hover,
+.iconButton:hover {
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  color: var(--color-accent);
+}
+
+.star[aria-pressed='true'] {
+  color: var(--color-accent);
+}
+
+.moveWrap {
+  position: relative;
+}
+
+.moveMenu {
+  position: absolute;
+  inset-block-start: calc(100% + var(--space-1));
+  inset-inline-end: 0;
+  z-index: 5;
+  display: grid;
+  gap: 2px;
+  min-inline-size: 12rem;
+  max-block-size: 16rem;
+  overflow-y: auto;
+  padding: var(--space-2);
+  border: var(--soft-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-raised);
+  box-shadow: var(--shadow-md);
+}
+
+.moveTitle {
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.moveItem {
+  padding: var(--space-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  text-align: start;
+}
+
+.moveItem:hover {
+  background: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  color: var(--color-accent);
+}
+
+.moveEmpty {
+  padding: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.titleBlock {
+  display: grid;
+  gap: 2px;
+  padding-inline: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.titleButton {
+  display: block;
+  inline-size: 100%;
+  overflow-wrap: anywhere;
+  color: var(--color-text);
+  font: inherit;
+  text-align: start;
+}
+
+.titleButton:hover {
+  color: var(--color-accent);
+}
+
+.titleInput {
+  inline-size: 100%;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.listName {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.body {
+  display: grid;
+  gap: var(--space-3);
+  flex: 1;
+  align-content: start;
+  min-block-size: 0;
+  padding: var(--space-4) var(--space-3)
+    max(var(--space-6), env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.section {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.sectionHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.sectionTitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.progress {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.notes {
+  inline-size: 100%;
+  min-block-size: 6.5rem;
+  padding: var(--space-3);
+  border: var(--soft-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.notes:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+/*
+ * Phone layout: the display is the only visible pane, so the panel becomes a
+ * full-screen sheet with its own scroll. Orientation drives this, per the Spec.
+ */
+@media (orientation: portrait) {
+  .panel {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    inline-size: 100%;
+    flex-basis: auto;
+    border-inline-end: 0;
+    animation: none;
+  }
+
+  .header {
+    padding-block-start: max(var(--space-3), env(safe-area-inset-top));
+  }
+}

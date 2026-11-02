@@ -1,0 +1,20 @@
+[data-theme='fatimid-blue'] {
+  color-scheme: dark;
+
+  --color-bg: #002060;
+  --color-surface: #001a4d;
+  --color-surface-raised: #003b73;
+  --color-border: #2e5fa3;
+  --color-text: #fff9e6;
+  --color-text-muted: #c3d3f0;
+  --color-accent: #ffd700;
+  --color-accent-contrast: #1a1a00;
+  --color-accent-alt: #30d5c8;
+  --color-danger: #ff9da8;
+  --color-focus-ring: #ffd700;
+  --color-today-ring: #ffd700;
+  --color-salah: #ffd700;
+  --color-task-academic: #ff9e9e;
+  --color-task-intellectual: #a8c8ff;
+  --color-task-project: #ffffff;
+}

@@ -1,0 +1,94 @@
+.calendar {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: var(--soft-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.monthTitle {
+  font-family: var(--font-display);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-align: center;
+}
+
+.iconButton {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  border: var(--soft-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+}
+
+.iconButton:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.weekdayRow,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+}
+
+.weekdayRow {
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.day {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+  font-variant-numeric: tabular-nums;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.day:hover {
+  border-color: var(--color-accent);
+}
+
+.isOutside {
+  color: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+.isToday {
+  border-color: var(--color-today-ring);
+}
+
+.isSelected {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: 600;
+}

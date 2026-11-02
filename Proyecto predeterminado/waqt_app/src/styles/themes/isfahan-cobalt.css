@@ -1,0 +1,20 @@
+[data-theme='isfahan-cobalt'] {
+  color-scheme: dark;
+
+  --color-bg: #000080;
+  --color-surface: #000a5a;
+  --color-surface-raised: #001a8c;
+  --color-border: #3b4db3;
+  --color-text: #fffdd0;
+  --color-text-muted: #c9d0f0;
+  --color-accent: #30d5c8;
+  --color-accent-contrast: #002a2a;
+  --color-accent-alt: #fffdd0;
+  --color-danger: #ff9aa8;
+  --color-focus-ring: #30d5c8;
+  --color-today-ring: #30d5c8;
+  --color-salah: #30d5c8;
+  --color-task-academic: #ffb3b3;
+  --color-task-intellectual: #b8c6ff;
+  --color-task-project: #fffdd0;
+}

@@ -1,0 +1,110 @@
+.repeat {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: var(--soft-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-raised);
+}
+
+.heading {
+  display: grid;
+  gap: 2px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+}
+
+.summary {
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: var(--space-1);
+}
+
+.day {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 1.5px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.day:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.day[aria-pressed='true'] {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.monthly {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.checkbox {
+  flex: none;
+  inline-size: 1.05rem;
+  block-size: 1.05rem;
+  accent-color: var(--color-accent);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.confirm {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+.confirm:hover {
+  filter: brightness(1.08);
+}
+
+.discard {
+  padding: var(--space-2) var(--space-4);
+  border: var(--soft-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.discard:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}

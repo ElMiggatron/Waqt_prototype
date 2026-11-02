@@ -1,0 +1,5 @@
+.arabic {
+  font-family: var(--font-perso-arabic);
+  font-size: 1.05rem;
+  line-height: 1;
+}

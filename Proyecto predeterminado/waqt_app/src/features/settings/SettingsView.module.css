@@ -1,0 +1,321 @@
+.page {
+  display: grid;
+  gap: var(--space-5);
+  max-inline-size: var(--content-max-width);
+}
+
+.section {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: var(--soft-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+}
+
+.sectionHeader {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.sectionTitle h2,
+.plainTitle {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+}
+
+.sectionIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  inline-size: 1.9rem;
+  block-size: 1.9rem;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-accent) 16%, transparent);
+  color: var(--color-accent);
+}
+
+.sectionNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}
+
+.fieldGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-3);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.fieldLabel {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.control {
+  inline-size: 100%;
+  block-size: 2.5rem;
+  padding-inline: var(--space-3);
+  border: var(--soft-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+select.control {
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.05rem) 1.1rem,
+    calc(100% - 0.7rem) 1.1rem;
+  background-repeat: no-repeat;
+  background-size: 0.35rem 0.35rem;
+  padding-inline-end: var(--space-6);
+}
+
+.toggles {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.checkbox {
+  flex: none;
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+  accent-color: var(--color-accent);
+}
+
+.themeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--space-3);
+}
+
+.themeCard {
+  display: grid;
+  grid-template-columns: 3.6rem minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-3);
+  inline-size: 100%;
+  block-size: 100%;
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-align: start;
+  transition:
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.themeCard:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.themeCard.isActiveTheme {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+/* The swatch carries its own `data-theme`, so theme-scoped variables resolve here. */
+.themeSwatch {
+  display: grid;
+  align-content: center;
+  gap: 0.3rem;
+  block-size: 3.4rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+}
+
+.swatchBar {
+  block-size: 0.3rem;
+  inline-size: 60%;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+}
+
+.swatchRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.swatchDot {
+  flex: none;
+  inline-size: 0.35rem;
+  block-size: 0.35rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.8;
+}
+
+.swatchLine {
+  block-size: 0.25rem;
+  inline-size: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+}
+
+.themeText {
+  display: grid;
+  gap: 2px;
+  min-inline-size: 0;
+}
+
+.themeName {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.themeDescription {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+}
+
+.autoThemes {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.autoTitle {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.autoNote {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+}
+
+.autoBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.autoBadge {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-xs);
+}
+
+.danger {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid color-mix(in srgb, var(--color-danger) 40%, var(--color-border));
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--color-danger) 6%, var(--color-surface));
+}
+
+.resetButton {
+  justify-self: start;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-pill);
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+}
+
+.resetButton:hover {
+  background: color-mix(in srgb, var(--color-danger) 14%, transparent);
+}
+
+.confirm {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg);
+}
+
+.confirmTitle {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+}
+
+.confirmActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.dangerButton {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-pill);
+  background: var(--color-danger);
+  color: var(--color-bg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.ghostButton {
+  padding: var(--space-2) var(--space-4);
+  border: var(--soft-border);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.ghostButton:hover {
+  border-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+@media (orientation: portrait) {
+  .section,
+  .danger {
+    padding: var(--space-4);
+  }
+
+  .themeGrid {
+    grid-template-columns: 1fr;
+  }
+}

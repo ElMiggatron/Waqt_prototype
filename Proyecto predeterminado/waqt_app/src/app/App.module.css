@@ -1,0 +1,8 @@
+.app {
+  display: flex;
+  inline-size: 100%;
+  block-size: 100dvh;
+  overflow: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+}

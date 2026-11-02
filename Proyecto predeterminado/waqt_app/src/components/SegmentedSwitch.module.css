@@ -1,0 +1,42 @@
+.switch {
+  display: inline-flex;
+  padding: 3px;
+  border: var(--soft-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+}
+
+.option {
+  display: grid;
+  place-items: center;
+  min-inline-size: 2.25rem;
+  block-size: 2rem;
+  padding-inline: var(--space-2);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.option:hover {
+  color: var(--color-text);
+}
+
+.option[aria-pressed='true'] {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+.compact {
+  padding: 2px;
+}
+
+.compact .option {
+  min-inline-size: 1.75rem;
+  block-size: 1.5rem;
+  padding-inline: var(--space-1);
+  font-size: var(--font-size-xs);
+}
